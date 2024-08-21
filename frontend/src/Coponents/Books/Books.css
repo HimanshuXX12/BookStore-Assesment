@@ -1,0 +1,61 @@
+
+.books{
+      min-height: 100vh;
+      padding:2rem;
+     
+         margin: 0 auto;
+         width: 70%;
+      
+}
+
+
+.item{
+    padding: 0.3rem;
+    
+}
+
+
+.slider{
+  
+   z-index: 1;
+   
+   width: 20%;
+}
+
+
+/* .single_book{
+    display:flex;
+    flex-direction: column;
+    gap:0.4rem;
+    padding:1.5rem;
+    border-radius: 5px;
+   
+} */
+
+
+.btn{
+    line-height: normal;
+}
+
+
+
+.description{
+   height: 96px;
+   overflow: scroll;
+   scrollbar-width: none; 
+    
+}
+
+
+.home_card{
+    
+    margin: 0 auto;
+    width:90%;
+    
+}
+
+
+.imager{
+    width: 150px;
+    height: 150px;
+}
