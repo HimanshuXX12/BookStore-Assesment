@@ -56,7 +56,7 @@ function Books() {
           }
      }
     const fetcher= async ()=>{
-        const res= await axios.get("http://localhost:300/books");
+        const res= await axios.get("https://bookstore-assesment-truk.onrender.com/books");
         console.log(res.data.books);
          setbooks(res.data.books);
     }
