@@ -21,8 +21,8 @@ function App() {
       </div>
       <BrowserRouter>
         <Routes>
-           {/* <Route path='/' element={localStorage.getItem("token")?<Home/>:<LoginSignUP/>}/> */}
            <Route path='/' element={<Home/>}/>
+            {/* <Route path='/login' element={localStorage.getItem("token")?<LoginSignUP/>:<Home/>}/> */}
            <Route path="/book/:bookid" element={<SingleBook/>}/>
         </Routes>
       </BrowserRouter>
