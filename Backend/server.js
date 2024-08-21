@@ -10,7 +10,7 @@ app.use(cors());
 controllers(app);
 const port=process.env.PORT|| 300;
 // const db_link=`mongodb+srv://himanshu200127:${process.env.PASSWORD}@cluster0.upi6i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
-const db_link=process.env.URL;
+const db_link="mongodb+srv://himanshu200127:7dsMUFnqY0EtszyZ@cluster0.upi6i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 mongoose.connect(db_link).then(()=>{

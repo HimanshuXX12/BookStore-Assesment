@@ -19,7 +19,7 @@ function Dialoge(props) {
           const {chapter_id, bookid}=props;
           console.log("event",event);
 
-         const res= await axios.post("https://bookstore-assesment-truk.onrender.com/rating",{
+         const res= await axios.post("http://localhost:300/rating",{
              chapter_id,
              bookid,
              rating

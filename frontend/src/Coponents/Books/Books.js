@@ -56,7 +56,7 @@ function Books() {
           }
      }
     const fetcher= async ()=>{
-        const res= await axios.get("https://bookstore-assesment-truk.onrender.com/books");
+        const res= await axios.get("http://localhost:300/books");
         console.log(res.data.books);
          setbooks(res.data.books);
     }
@@ -88,10 +88,10 @@ function Books() {
         <ul>
           <li className='item'><Link to="/">
           <i class="bi bi-house-add-fill"></i><span className='ml-3'>Home</span></Link></li>
-          <li className='item'><Link to="/about"><i class="bi bi-book"></i><span className='ml-3'>Mathmatics</span></Link></li>
-          <li className='item'><Link to="/about"><i class="bi bi-book"></i><span className='ml-3'>Computer Vision</span></Link></li>
-          <li className='item'><Link to="/about"><i class="bi bi-book"></i><span className='ml-3'>Intro to Deep learning</span></Link></li>
-          <li className='item'><Link to="/contact"><i class="bi bi-person-lines-fill"></i><span className='ml-3'>Introduction to Programming</span></Link></li>
+          <li className='item'><Link to="/book/66c30e68a93503b347b59784"><i class="bi bi-book"></i><span className='ml-3'>Mathmatics</span></Link></li>
+          <li className='item'><Link to="/book/66c30e68a93503b347b597a5"><i class="bi bi-book"></i><span className='ml-3'>Computer Vision</span></Link></li>
+          <li className='item'><Link to="/book/66c30e68a93503b347b597b7"><i class="bi bi-book"></i><span className='ml-3'>Intro to Deep learning</span></Link></li>
+          <li className='item'><Link to="/book/66c30e68a93503b347b59797"><i class="bi bi-person-lines-fill"></i><span className='ml-3'>Introduction to Programming</span></Link></li>
           <li className='item'><Link to="#">
           <i class="bi bi-box-arrow-right"></i> <span className='ml-3'>Logout</span>
           </Link></li>
@@ -123,7 +123,7 @@ function Books() {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{book.name}</h2>
                 <p className='description'>{book.description}</p>
-                <div className="card-actions flex justify-evenly w-full ">
+                <div className="card-actions flex justify-between w-full ">
                  {
                     book.domain?.map((domain)=>{
                         return (
@@ -137,6 +137,7 @@ function Books() {
             </div>
          )
        })}
+       
     </div>
   </div>
   )

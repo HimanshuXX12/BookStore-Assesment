@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import LoginSignUP from './Pages/LoginSignUP';
+
 import SingleBook from './Coponents/SingleBook/SingleBook';
 import Home from './Pages/Home/Home';
 import { Toaster } from 'react-hot-toast';
