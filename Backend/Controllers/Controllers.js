@@ -1,8 +1,8 @@
 const { response } = require("express");
 const courses= require("../Models/Courses");
-const document=  require("../courses (1) (1).json");
+
 const json= require("jsonwebtoken");
-const user_model= requre("../Models/user_model.js");
+
 
 
 function controllers(app)
@@ -34,34 +34,34 @@ function controllers(app)
                 res.json({sucess:true,books:data});
             })
 
-            app.post("/signup",async (req,res)=>{
-                const {email,password}=req.body;
-                console.log("singup funcion",req.body);
-                if(!email || !password)
-                {
-                    res.json({error:"Both are required",sucess:false});
-                }
+        //     app.post("/signup",async (req,res)=>{
+        //         const {email,password}=req.body;
+        //         console.log("singup funcion",req.body);
+        //         if(!email || !password)
+        //         {
+        //             res.json({error:"Both are required",sucess:false});
+        //         }
 
-                const user = await user_model.findOne({ email: email });
+        //         const user = await user_model.findOne({ email: email });
 
-                if(user)
-                {
-                    res.json({error:"Already existed User with this Mail id",sucess:false})
-                }
-                else{
-                    const hash= await bcrypt.hash(password,10);
-                    const data= new user_model({
-                        email:email,
-                        password:hash
-                    })
+        //         if(user)
+        //         {
+        //             res.json({error:"Already existed User with this Mail id",sucess:false})
+        //         }
+        //         else{
+        //             const hash= await bcrypt.hash(password,10);
+        //             const data= new user_model({
+        //                 email:email,
+        //                 password:hash
+        //             })
 
-                    data.save().then(()=>{
-                        res.json({error:"Sucessfully Signed Up",sucess:true,saved_data:data});
-                    })
+        //             data.save().then(()=>{
+        //                 res.json({error:"Sucessfully Signed Up",sucess:true,saved_data:data});
+        //             })
 
-                }
+        //         }
 
-        })
+        // })
 
    // Login Route
             // app.post("/login",async (req,res)=>{
